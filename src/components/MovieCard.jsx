@@ -4,7 +4,7 @@ function MovieCard({movie}) {
     const imageUrl = "https://image.tmdb.org/t/p/w300" + movie.poster_path;
   return (
     <ul class = 'max-w-md mx-auto hover:opacity-50 translate-x-4  transition-all'>
-        <div class = 'text-2xl font-medium text-center text-gray-300'>{movie.title}</div>
+        
         <Link to={"/movies/"+movie.id}>
             <img 
             width={230}
@@ -14,6 +14,7 @@ function MovieCard({movie}) {
             class = 'rounded-lg width to-90% h-auto'
             />
         </Link>
+        <div class = 'text-xl font-bold text-center text-white'>{movie.title}</div>
     </ul>
   )
 }

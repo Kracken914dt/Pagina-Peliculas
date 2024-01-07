@@ -10,11 +10,13 @@ function ContextMovieTargeta() {
     });
   }, []);
   return (
-    <ul class = 'grid grid-cols-4 gap-4 content-center'>
-      {movies.map((movie) => (
-        <MovieCard key={movie.id} movie={movie} />
-      ))}
-    </ul>
+    <div className="container mx-auto p-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 justify-center">
+        {movies.map((movie) => (
+          <MovieCard key={movie.id} movie={movie} />
+        ))}
+      </div>
+    </div>
   );
 }
 
